@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PetFindR - MyBlog</title>
+    <meta property="og:title" content="PetFindR - MyBlog">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="I am big fan of pets.PetFindr provides an R interface for the Petfinder.com API (V2). Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information &amp;hellip;">
+      <meta property="og:description" content="I am big fan of pets.PetFindr provides an R interface for the Petfinder.com API (V2). Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information &amp;hellip;">
+      
+    
+
+    
+    
+    <meta name="twitter:image" content="https://travis-ci.org/earl88/PetFindr.svg?branch=master">
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="2019">
+    <header class="masthead">
+      <h1><a href="/">MyBlog</a></h1>
+
+<p class="tagline">Amin Shirazi&#39;s Weblog</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">My Blog</a></li>
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="https://ashirazist.github.io/">Amin Shirazi</a></li>
+  
+  <li><a href="https://github.com/ashirazist">GitHub</a></li>
+  
+  <li><a href="https://www.linkedin.com/in/ashirazist/">Linkedin</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>PetFindR</h1>
+
+<h3>Amin Shirazi
+  /  2019-06-05</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+<p>I am big fan of pets.
+<strong>PetFindr</strong> provides an R interface for the Petfinder.com API (V2). Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information about animals by type, breed, location, and other useful characteristics. This package was developed in a team of the five of us at Iowa State University as a part of STAT 585 project.</p>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="petfindr" class="section level1">
+<h1>PetFindr <img src='content/post/logo.png' align="right" height="280" /></h1>
+<!-- badges: start -->
+<p><a href="https://travis-ci.org/earl88/PetFindr"><img src="https://travis-ci.org/earl88/PetFindr.svg?branch=master" alt="Travis build status" /></a>
+<a href="https://codecov.io/gh/earl88/PetFindr?branch=master"><img src="https://codecov.io/gh/earl88/PetFindr/branch/master/graph/badge.svg" alt="Codecov test coverage" /></a>
+<!-- badges: end --></p>
+<p>PetFindr provides an R interface for the <a href="https://www.petfinder.com/developers/">Petfinder.com API (V2)</a>. Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information about animals by type, breed, location, and other useful characteristics. Find more documentation at <a href="https://earl88.github.io/PetFindr/" class="uri">https://earl88.github.io/PetFindr/</a>.</p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install the the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;earl88/PetFindr&quot;)</code></pre>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<div id="set-up" class="section level3">
+<h3>Set up</h3>
+<p>Welcome to PetFindr! Before you can search for sweet puppers and kitty cats in R, you’ll need to register for the official PetFinder API (V2) at <a href="https://www.petfinder.com/developers/" class="uri">https://www.petfinder.com/developers/</a>.</p>
+<pre class="r"><code>library(PetFindr)
+pf_setup()</code></pre>
+<p>The PetFinder API (V2) will assign you a key and secret. Those values can be saved to your .Rprofile for future use.</p>
+<pre class="r"><code>petfindr_key &lt;- &quot;paste_key_here&quot;
+petfindr_secret &lt;- &quot;paste_secret_here&quot;
+pf_save_credentials(key = petfindr_key, secret = petfindr_secret)</code></pre>
+<p>You’re almost ready to find pets! Before you can make a search, you’ll need to get an access token.</p>
+<pre class="r"><code>token &lt;- pf_accesstoken(petfindr_key, petfindr_secret)</code></pre>
+<p>Your access token will last for one hour. After that time, you will need to generate a new token.</p>
+</div>
+<div id="using-petfindr" class="section level3">
+<h3>Using PetFindr</h3>
+<p>PetFindr has two functions that list available animal search values: <code>pf_list_types()</code> and <code>pf_list_breeds()</code>. To list animal breeds, you must specify one of the primary animal types.</p>
+<pre class="r"><code>pf_list_types(token)</code></pre>
+<pre><code>#&gt; # A tibble: 8 x 4
+#&gt;   name        coats                colors                           genders     
+#&gt;   &lt;chr&gt;       &lt;chr&gt;                &lt;chr&gt;                            &lt;chr&gt;       
+#&gt; 1 Dog         &quot;Hairless, Short, M~ Apricot / Beige, Bicolor, Black~ Male, Female
+#&gt; 2 Cat         &quot;Hairless, Short, M~ Black, Black &amp; White / Tuxedo, ~ Male, Female
+#&gt; 3 Rabbit      &quot;Short, Long&quot;        Agouti, Black, Blue / Gray, Bro~ Male, Female
+#&gt; 4 Small &amp; Fu~ &quot;Hairless, Short, L~ Agouti, Albino, Black, Black Sa~ Male, Female
+#&gt; 5 Horse       &quot;&quot;                   Appaloosa, Bay, Bay Roan, Black~ Male, Female
+#&gt; 6 Bird        &quot;&quot;                   Black, Blue, Brown, Buff, Gray,~ Male, Femal~
+#&gt; 7 Scales, Fi~ &quot;&quot;                   Black, Blue, Brown, Gray, Green~ Male, Femal~
+#&gt; 8 Barnyard    &quot;Short, Long&quot;        Agouti, Black, Black &amp; White, B~ Male, Female</code></pre>
+<pre class="r"><code>pf_list_breeds(token, type = &quot;dog&quot;) %&gt;% head()</code></pre>
+<pre><code>#&gt; [1] &quot;Affenpinscher&quot;    &quot;Afghan Hound&quot;     &quot;Airedale Terrier&quot; &quot;Akbash&quot;          
+#&gt; [5] &quot;Akita&quot;            &quot;Alaskan Malamute&quot;</code></pre>
+<p>Armed with options for animal type, breed, coat, color, and gender from the pf_list_*() functions, you can search for animals using a variety of query parameters.</p>
+<pre class="r"><code># Search for baby dogs
+puppies &lt;- pf_find_pets(token, type = &quot;dog&quot;, age = &quot;baby&quot;, gender = &quot;female&quot;)
+
+# View images of horses near Dallas, TX
+pf_find_pets(token, type = &quot;horse&quot;, location = &quot;Dallas, TX&quot;, sort = &quot;distance&quot;) %&gt;%
+  pf_view_photos(., size = &quot;small&quot;)</code></pre>
+<p><img src="https://raw.githubusercontent.com/earl88/PetFindr/master/inst/FinalPresentation/images/horsepics.gif" width="40%" /></p>
+<pre class="r"><code># Map the locations of small &amp; furry animals
+pf_find_pets(token, type = &quot;Small &amp; furry&quot;, page = 1) %&gt;%
+  pf_map_locations(token, .)</code></pre>
+<p>Interactive exploration of the package could be done with Shiny.</p>
+<pre class="r"><code>library(shiny)
+pf_run_Shiny()</code></pre>
+<p>For more details, see the <a href="https://earl88.github.io/PetFindr/articles/using-petfindr.html">vignette</a>.</p>
+</div>
+</div>
+</div>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">© <a href="https://ashirazist.github.io">Amin Shirazi</a> 2018 | <a href="https://github.com/ashirazist">Github</a> | <a href="https://www.linkedin.com/in/ashirazist/">Linkedin</a></div>
+  
+  </footer>
+  </article>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', '226202930', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

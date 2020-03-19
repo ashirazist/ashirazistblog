@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>PetFindR</title>
+      <link>/2019/06/05/petfindr/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/05/petfindr/</guid>
+      <description>I am big fan of pets.PetFindr provides an R interface for the Petfinder.com API (V2). Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information about animals by type, breed, location, and other useful characteristics. This package was developed in a team of the five of us at Iowa State University as a part of STAT 585 project.
+PetFindr PetFindr provides an R interface for the Petfinder.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
