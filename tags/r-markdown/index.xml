@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Markdown on MyBlog</title>
-    <link>/tags/r-markdown/</link>
+    <link>https://ashirazistblog.netlify.com/tags/r-markdown/</link>
     <description>Recent content in R Markdown on MyBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ashirazistblog.netlify.com/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>All packages you need in R</title>
-      <link>/2020/03/18/all-packages-you-need-in-r/</link>
+      <link>https://ashirazistblog.netlify.com/2020/03/18/all-packages-you-need-in-r/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/03/18/all-packages-you-need-in-r/</guid>
+      <guid>https://ashirazistblog.netlify.com/2020/03/18/all-packages-you-need-in-r/</guid>
       <description>About the time this post being written I am writting this post in the Spring break of 2020. What should be remembered is not the Spring break, but the current global epidmic of coronavirus also known as COVID-19. There have been thousands of confirmed cases and many deaths all around the world, and unfortunately, the number is still going up. Many countries are completely shut down due to this pandemic issue.</description>
     </item>
     
