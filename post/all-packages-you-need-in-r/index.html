@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="A personal weblog">
+    
 
     
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400&display=swap' rel='stylesheet' type='text/css'>
@@ -15,10 +15,10 @@
     <title>
       
       
-         About 
+         All packages you need in R 
       
     </title>
-    <link rel="canonical" href="/about/">
+    <link rel="canonical" href="/post/all-packages-you-need-in-r/">
 
     <style>
   * {
@@ -407,34 +407,89 @@
 
   <body>
     <section id=nav>
-      <h1><a href="/"></a></h1>
+      <h1><a href="/">Black &amp; Light</a></h1>
       <ul>
         
-          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/davidhampgonsalves/hugo-black-and-light-theme">About</a></li>
         
-          <li><a href="https://ashirazist.github.io/">Amin Shirazi</a></li>
+          <li><a href="https://github.com/davidhampgonsalves/hugo-black-and-light-theme">Projects</a></li>
         
-          <li><a href="https://github.com/ashirazist">GitHub</a></li>
-        
-          <li><a href="https://www.linkedin.com/in/ashirazist/">Linkedin</a></li>
-        
-          <li><a href="https://ashirazistblog.netlify.com/">My Blog</a></li>
+          <li><a href="https://github.com/davidhampgonsalves/hugo-black-and-light-theme">Resume</a></li>
         
       </ul>
     </section>
 
 
 <section id=content>
-  <h1> About </h1>
+  <h1> All packages you need in R </h1>
 
   
     <div id=sub-header>
-      December 2018 · 1 minute read
+      March 2020 · 3 minute read
     </div>
   
 
   <div class="entry-content">
-    <p>My name is Amin Shirazi. You can know more about me on the <a href="https://ashirazist.github.io/"><strong>homepage</strong></a> and my <a href="https://ashirazist.github.io/src/CV/cv.pdf"><strong>CV</strong></a>. I have decided to share my experiences about what I know in statistics and its application in R, and anything which I think is worth reading with others here in this blog. I never consider myself a pro in writting blogs about my major, so I would be more than happy if you could share your thoughts with me about my posts or about what you think could be presented in a better way. I just enjoy learning new things and sharing them with you. I have promised to myself to update my posts once I get feedback or when I find a better replacement for what I have in a post. What you see in my posts are just how I see things, which might seem dummy to you, and if I use someone else&rsquo;s stuff (posts, codes or opinion), I will mention their names.</p>
+    
+
+
+<div id="about-the-time-this-post-being-written" class="section level2">
+<h2>About the time this post being written</h2>
+<p>I am writting this post in the Spring break of 2020. What should be remembered is not the Spring break, but the current global epidmic of <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"><strong>coronavirus</strong></a> also known as <strong>COVID-19</strong>. There have been thousands of confirmed cases and many deaths all around the world, and unfortunately, the number is still going up. Many countries are completely shut down due to this pandemic issue. Schools are all closed, and classes are all going to be online up to the end of Spring semester. People are trying to be quarantined in their homes, and honestly speaking, it is very boring and sometimes depressing to be at home all the time.</p>
+<p>I have wanted to finish this post for a long time, but I did not get the time to finalize everything. This self-quarantine gave me the chance to finish up this post and share it with you.</p>
+</div>
+<div id="updating-r-studio-is-a-hassle" class="section level2">
+<h2>Updating R Studio is a hassle!</h2>
+<p>Many of you who have updated your Rstudio at some point would probably agree with me on this. It has happened to me to update my R or Rstudio during the semester or while working on a project. After updating the software itself, not a package works properly. First of all, I needed to update billions of packages which took forever. After that, some packages did not work due to some other issues related to update in the software and packages. It was such a pain to stop my work on the research and just sitting down updating different packagtes in Rstutio. Frankly speaking, I am not much of an expert in complicated packages which run behind the interface of Rstudio (things like <code>rlang</code>, which drives me crazy while updating other packages). These packages definitely play important roles in running the software, but since I have never got to use them directly (if they can be used directly), I have no idea of what they do. What I know is that I need to deal with them save myself the hassle. It did not matter how many times I restarted the session, there was still warnings and errors coming up, and I wanted to hit my head to the table.</p>
+<p>The last time I had to update my Rstudio was right in the middle of an R visualization course, when I accidentaly hit the update button and then BOOM! The bother started! What saved me was Dr <a href="https://srvanderplas.netlify.com/"><em>Susan Vanderplas</em>’s</a> <a href="https://srvanderplas.netlify.com/post/2016-04-11-install-useful-r-packages/install-useful-r-packages/">post</a> about package updates in R. This is probably the most useful code for installing packages after installing, reinstalling or updating R. This piece of code installs almost all packages you would need in R. What you need to do is just run this chunk into you console.</p>
+<pre><code>
+pkgs &lt;- read.csv(
+  &quot;https://raw.githubusercontent.com/srvanderplas/srvanderplas.github.io/master/Data/Packages.csv&quot;,
+  stringsAsFactors = F, comment.char = &quot;#&quot;)
+
+# Get rid of installr package if on linux
+if (Sys.info()[1] == &quot;Linux&quot;) {
+  pkgs &lt;- subset(pkgs, Name != &quot;installr&quot;)
+}
+
+# Don&#39;t reinstall packages that are already installed
+installed.pkgs &lt;- installed.packages()
+pkgs &lt;- pkgs[!pkgs$Name %in% installed.pkgs,]
+
+# Separate out github packages
+gh &lt;- subset(pkgs, Location == &quot;github&quot;)
+cran &lt;- subset(pkgs, Location == &quot;CRAN&quot;)
+
+# Install cran packages (if any are not already installed)
+if (nrow(cran) &gt; 0) {
+  install.packages(cran$Name, Ncpus = availableCores(),
+                   dependencies = c(&#39;Suggests&#39;, &#39;Depends&#39;, &#39;Imports&#39;, &#39;Enhances&#39;))
+}
+
+
+# Install github packages
+library(devtools)
+
+lapply(sprintf(&quot;%s/%s&quot;, gh$Author, gh$Name),
+       function(.) {
+         try(install_github(.,
+                            dependencies = c(&#39;Suggests&#39;, &#39;Depends&#39;, &#39;Imports&#39;, &#39;Enhances&#39;)))
+       })
+
+# Install other packages
+# Requires perl installation
+install.packages(&quot;WriteXLS&quot;, dependencies = T)
+
+
+# Install handy RStudio extensions
+install_github(c(&quot;daattali/colourpicker&quot;,  # Color picker
+                 &quot;MilesMcBain/mufflr&quot;,  # Pipe shortcuts
+                 &quot;dokato/todor&quot;,  # Package todo management
+                 &quot;daattali/addinslist&quot;,  # List of add-ins
+                 &quot;mdlincoln/docthis&quot;  # Roxygen skeleton for functions
+))</code></pre>
+<p>Susan has tried to include all essential packages in this code, but you might need to install/ update your specific packages</p>
+</div>
 
   </div>
 
@@ -445,17 +500,6 @@
 </section>
 
   
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', '226202930', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>
 

@@ -1,0 +1,80 @@
+---
+title: All packages you need in R
+author: 'Amin Shirazi'
+date: '2020-03-18'
+categories:
+  - R
+tags:
+  - Install packages
+  - R Markdown
+  - Update R
+  - Useful packages
+slug: all-packages-you-need-in-r
+---
+## About the time this post being written
+I am writting this post in the Spring break of 2020. What should be remembered is not the Spring break, but the current global epidmic of [**coronavirus**](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) also known as **COVID-19**. There have been thousands of confirmed cases and many deaths all around the world, and unfortunately, the number is still going up. Many countries are completely shut down due to this pandemic issue. Schools are all closed, and classes are all going to be online up to the end of Spring semester. People are trying to be quarantined in their homes, and honestly speaking, it is very boring and sometimes depressing to be at home all the time.  
+
+I have wanted to finish this post for a long time, but I did not get the time to finalize everything. This self-quarantine gave me the chance to finish up this post and share it with you.
+
+## Updating R Studio is a hassle! 
+Many of you who have updated your Rstudio at some point would probably agree with me on this. It has happened to me to update my R or Rstudio during the semester or while working on a project. After updating the software itself, not a package works properly. First of all, I needed to update billions of packages which took forever. After that, some packages did not work due to some other issues related to update in the software and packages. It was such a pain to stop my work on the research and just sitting down updating different packagtes in Rstutio. Frankly speaking, I am not much of an expert in complicated packages which run behind the interface of Rstudio (things like `rlang`, which drives me crazy while updating other packages). These packages definitely play important roles in running the software, but since I have never got to use them directly (if they can be used directly), I  have no idea of what they do. What I know is that I need to deal with them save myself the hassle. It did not matter how many times I restarted the session, there was still warnings and errors coming up, and I wanted to hit my head to the table. 
+
+The last time I had to update my Rstudio was right in the middle of an R visualization course, when I accidentaly hit the update button and then BOOM! The bother started! What saved me was Dr [*Susan Vanderplas*'s](https://srvanderplas.netlify.com/) [post](https://srvanderplas.netlify.com/post/2016-04-11-install-useful-r-packages/install-useful-r-packages/) about package updates in R. This is probably the most useful code for installing packages after installing, reinstalling or updating  R. This piece of code installs almost all packages you would need in R. What you need to do is just run this chunk into you console. 
+
+```{}
+
+pkgs <- read.csv(
+  "https://raw.githubusercontent.com/srvanderplas/srvanderplas.github.io/master/Data/Packages.csv",
+  stringsAsFactors = F, comment.char = "#")
+
+# Get rid of installr package if on linux
+if (Sys.info()[1] == "Linux") {
+  pkgs <- subset(pkgs, Name != "installr")
+}
+
+# Don't reinstall packages that are already installed
+installed.pkgs <- installed.packages()
+pkgs <- pkgs[!pkgs$Name %in% installed.pkgs,]
+
+# Separate out github packages
+gh <- subset(pkgs, Location == "github")
+cran <- subset(pkgs, Location == "CRAN")
+
+# Install cran packages (if any are not already installed)
+if (nrow(cran) > 0) {
+  install.packages(cran$Name, Ncpus = availableCores(),
+                   dependencies = c('Suggests', 'Depends', 'Imports', 'Enhances'))
+}
+
+
+# Install github packages
+library(devtools)
+
+lapply(sprintf("%s/%s", gh$Author, gh$Name),
+       function(.) {
+         try(install_github(.,
+                            dependencies = c('Suggests', 'Depends', 'Imports', 'Enhances')))
+       })
+
+# Install other packages
+# Requires perl installation
+install.packages("WriteXLS", dependencies = T)
+
+
+# Install handy RStudio extensions
+install_github(c("daattali/colourpicker",  # Color picker
+                 "MilesMcBain/mufflr",  # Pipe shortcuts
+                 "dokato/todor",  # Package todo management
+                 "daattali/addinslist",  # List of add-ins
+                 "mdlincoln/docthis"  # Roxygen skeleton for functions
+))
+```
+
+
+Susan has tried to include all essential packages in this code, but you might need to install/ update your specific packages
+
+
+
+
+
+
