@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Amin Shirazi&#39;s blog</title>
+    <title>Tags on MyBlog</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Amin Shirazi&#39;s blog</description>
+    <description>Recent content in Tags on MyBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
@@ -44,6 +44,33 @@
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/useful-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/tags/about/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MyBlog</title>
+      <link>/tags/myblog/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/myblog/</guid>
       <description></description>
     </item>
     
