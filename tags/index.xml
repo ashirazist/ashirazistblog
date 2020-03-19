@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MyBlog</title>
-    <link>https://ashirazistblog.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on MyBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashirazistblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install packages</title>
-      <link>https://ashirazistblog.netlify.com/tags/install-packages/</link>
+      <link>/tags/install-packages/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/install-packages/</guid>
+      <guid>/tags/install-packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>https://ashirazistblog.netlify.com/tags/r-markdown/</link>
+      <link>/tags/r-markdown/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/r-markdown/</guid>
+      <guid>/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Update R</title>
-      <link>https://ashirazistblog.netlify.com/tags/update-r/</link>
+      <link>/tags/update-r/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/update-r/</guid>
+      <guid>/tags/update-r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Useful packages</title>
-      <link>https://ashirazistblog.netlify.com/tags/useful-packages/</link>
+      <link>/tags/useful-packages/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/useful-packages/</guid>
+      <guid>/tags/useful-packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>API</title>
-      <link>https://ashirazistblog.netlify.com/tags/api/</link>
+      <link>/tags/api/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/api/</guid>
+      <guid>/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Petfinder.com</title>
-      <link>https://ashirazistblog.netlify.com/tags/petfinder.com/</link>
+      <link>/tags/petfinder.com/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/petfinder.com/</guid>
+      <guid>/tags/petfinder.com/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Package</title>
-      <link>https://ashirazistblog.netlify.com/tags/r-package/</link>
+      <link>/tags/r-package/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/r-package/</guid>
+      <guid>/tags/r-package/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://ashirazistblog.netlify.com/tags/about/</link>
+      <link>/tags/about/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/about/</guid>
+      <guid>/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://ashirazistblog.netlify.com/tags/blog/</link>
+      <link>/tags/blog/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/blog/</guid>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MyBlog</title>
-      <link>https://ashirazistblog.netlify.com/tags/myblog/</link>
+      <link>/tags/myblog/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/tags/myblog/</guid>
+      <guid>/tags/myblog/</guid>
       <description></description>
     </item>
     
