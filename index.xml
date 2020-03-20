@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MyBlog</title>
-    <link>https://ashirazistblog.netlify.com/</link>
+    <link>/</link>
     <description>Recent content on MyBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashirazistblog.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>All packages you need in R</title>
-      <link>https://ashirazistblog.netlify.com/2020/03/18/all-packages-you-need-in-r/</link>
+      <link>/post/all-packages-you-need-in-r/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/2020/03/18/all-packages-you-need-in-r/</guid>
-      <description>About the time this post being written I am writting this post in the Spring break of 2020. What should be remembered is not the Spring break, but the current global epidmic of coronavirus also known as COVID-19. There have been thousands of confirmed cases and many deaths all around the world, and unfortunately, the number is still going up. Many countries are completely shut down due to this pandemic issue.</description>
+      <guid>/post/all-packages-you-need-in-r/</guid>
+      <description>About the time this post being writtenI am writting this post in the Spring break of 2020. What should be remembered is not the Spring break, but the current global epidmic of coronavirus also known as COVID-19. There have been thousands of confirmed cases and many deaths all around the world, and unfortunately, the number is still going up. Many countries are completely shut down due to this pandemic issue.</description>
     </item>
     
     <item>
       <title>PetFindR</title>
-      <link>https://ashirazistblog.netlify.com/2019/06/05/petfindr/</link>
+      <link>/post/petfindr/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/2019/06/05/petfindr/</guid>
+      <guid>/post/petfindr/</guid>
       <description>I am big fan of pets.PetFindr provides an R interface for the Petfinder.com API (V2). Once a user obtains an API key and secret from Petfinder, this package allows the user to retrieve information about animals by type, breed, location, and other useful characteristics. This package was developed in a team of the five of us at Iowa State University as a part of STAT 585 project.
 PetFindr PetFindr provides an R interface for the Petfinder.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://ashirazistblog.netlify.com/about/</link>
+      <link>/about/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/about/</guid>
+      <guid>/about/</guid>
       <description>My name is Amin Shirazi. You can know more about me on the homepage and my CV. I have decided to share my experiences about what I know in statistics and its application in R, and anything which I think is worth reading with others here in this blog. I never consider myself a pro in writting blogs about my major, so I would be more than happy if you could share your thoughts with me about my posts or about what you think could be presented in a better way.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://ashirazistblog.netlify.com/2018/06/21/about/</link>
+      <link>/post/about/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/2018/06/21/about/</guid>
+      <guid>/post/about/</guid>
       <description>My name is Amin Shirazi. You can know more about me on the homepage and my CV. I have decided to share my experiences about what I know in statistics and its application in R, and anything which I think is worth reading with others here in this blog. I never consider myself a pro in writting blogs about my major, so I would be more than happy if you could share your thoughts with me about my posts or about what you think could be presented in a better way.</description>
     </item>
     

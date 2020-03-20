@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on MyBlog</title>
-    <link>https://ashirazistblog.netlify.com/tags/blog/</link>
+    <link>/tags/blog/</link>
     <description>Recent content in Blog on MyBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashirazistblog.netlify.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://ashirazistblog.netlify.com/2018/06/21/about/</link>
+      <link>/post/about/</link>
       <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ashirazistblog.netlify.com/2018/06/21/about/</guid>
+      <guid>/post/about/</guid>
       <description>My name is Amin Shirazi. You can know more about me on the homepage and my CV. I have decided to share my experiences about what I know in statistics and its application in R, and anything which I think is worth reading with others here in this blog. I never consider myself a pro in writting blogs about my major, so I would be more than happy if you could share your thoughts with me about my posts or about what you think could be presented in a better way.</description>
     </item>
     
